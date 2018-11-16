@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box1{
+				width: 500px;
+				height: 700px;
+				margin: 0 auto;
+				border: 1px solid black;
+				position: relative;
+			}
+			ul li{
+				list-style: none;
+			}
+			li img{
+				width: 20px;
+				height: 20px;
+			}
+			input{
+				width: 300px;
+				position: absolute;
+				top: 650px;
+				left: 45px;
+			}
+			button{
+				position: absolute;
+				top: 650px;
+				left: 380px;
+			}
+		</style>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="box1">
+			<ul>
+			</ul>
+			<input type="" name="ipt1" id="ipt1" value="" />
+			<button class="btn1">发送</button>
+		</div>
+		<script type="text/javascript">
+			$('.btn1').click(function () {
+				var li=$('<li></li>')
+				li.html(('<img src="img/icon-east.png"/>')+$('#ipt1').val())
+				$('ul').append(li)
+				
+				$('li:even').css('textAlign','left')
+				$('li:odd img').css('float','right')
+				$('li:odd img').attr('src',"img/icon-west.png/")
+				$('li:odd').css('textAlign','right')
+				$('#ipt1').attr('value','')
+				
+			})
+		</script>
+	</body>
+</html>

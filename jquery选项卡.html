@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.div2{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				position: absolute;
+				top: 100px;
+				left: 0;
+				display: none;
+			}
+			.div1{
+				width: 50px;
+				height: 50px;
+				background: yellow;
+				float: left;
+				margin-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		
+		<div class="div2" style="display: block;">1</div>
+		<div class="div2">2</div>
+		<div class="div2">3</div>
+		<div class="div2">4</div>
+		<div class="div2">5</div>
+		
+		<div class="div1" style="background: red;">1</div>
+		<div class="div1">2</div>
+		<div class="div1">3</div>
+		<div class="div1">4</div>
+		<div class="div1">5</div>
+		<script type="text/javascript">
+			/**
+			 * 1.找到按钮添加点击事件(click)
+			 * 2.让对应的按钮变成红色
+			 * 3.所有按钮都变红了		清空所有
+			 * 4.让对应的div显示
+			 * 5.所有div都显示	所有的都消失
+			 * */
+			
+		
+//					$('.div1').click(function () {
+//						$('.div1').css('background','')
+//						$(this).css('background','red')
+//						$('.div2').css('display','none')
+//						$('.div2').eq($(this).index()).css('display','block')
+//					})
+					
+				var	oDiv1=document.getElementsByClassName('div1')
+				var oDiv2=document.getElementsByClassName('div2')
+				
+				for (var i=0;i<oDiv1.length;i++) {
+					oDiv1[i].index=i
+					oDiv1[i].onclick=function () {
+						for (var i=0;i<oDiv1.length;i++) {
+							oDiv1[i].style.background=''
+							oDiv2[i].style.display='none'
+					}
+							this.style.background='red'	
+							oDiv2[this.index].style.display='block'
+					}
+					
+				}
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			#box1{
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				float: left;
+			}
+			#box2{
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				float: left;
+			}
+			button{
+				float: left;
+			}
+			input{
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<ul>
+			</ul>
+		</div>
+		<button class="btn1">发送一</button><button class="btn2">发送二</button>
+		<div id="box2">
+			<ul>
+			</ul>
+		</div>
+		<input type="text" name="ipt3" id="ipt3" value="" />
+		<button class="btn3">发送</button>
+		
+		<script type="text/javascript">
+			var temp=true
+			$('.btn3').click(function () {
+				if (temp) {
+					$('#box1').append($('#ipt3').val()+'<br>')
+				} else{
+					$('#box2').append($('#ipt3').val()+'<br>')
+					
+				}
+				$('#ipt3').attr('value','')
+				temp=!temp
+			})
+			
+			$('.btn1').click(function () {
+				$('#box2').append($('#box1').html())
+				$('#box1').html('')
+			})
+			
+			$('.btn2').click(function () {
+				$('#box1').append($('#box2').html())
+				$('#box2').html('')
+			})
+			
+		</script>
+	</body>
+</html>

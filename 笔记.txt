@@ -1,0 +1,40 @@
+什么是jquery？ 简称 jq
+一个javascript库 大型项目必备
+疑问：
+	什么是库？
+	什么是框架？
+	什么是插件？
+	csshack？方法
+	由于浏览器的不同，对CSS的解析认识不完全一样，因此会导致生成的页面效果不一样，
+	就需要针对不同的浏览器去写不同的CSS，
+	让它能够同时兼容不同的浏览器，
+	能在不同的浏览器中也能得到我们想要的页面效果。
+	
+	什么是html？超文本标记语言
+	什么是html5？ HTML5 是对 HTML 标准的第五次修订。其主要的目标是将互联网语义化，
+				以便更好地被人类和机器阅读，并同时提供更好地支持各种媒体的嵌入。
+				HTML5 的语法是向后兼容的。
+	选择器？兄弟选择器，子代选择器，伪类选择器，属性选择器 ，标签选择器
+优点：大量便捷的方法	简化js操作	兼容性问题【获取元素方法：id tagname classname（兼容性）
+									 ie	9		6 7 8	width	200px	ie6 220 ie7 180
+									 querySelector querySelectorAll
+									】
+									
+									 
+缺点：每次引入	资源累赘
+zepto.js（轻量型的jq）	2014年前移动端必备	tap（点 触摸点）
+touch	touchstart	touchmove	touchend
+		onmusedown	onmusemove	onmuseup
+js兼容：
+	classname：
+	style：
+	addEventlisern：
+	冒泡
+	ajax
+	滚轮事件
+	
+
+学习jq：www.jquery.com
+
+js和jq的关系：
+		iq辅助js主体	

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+		</script>
+	</head>
+	<body>
+		<!--设计思想   选区网页元素-->
+		<!--<div id="div" class="box">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>-->
+		<div title="aa">aa</div>
+		<div title="bb">bb</div>
+		<div title="cc">cc</div>
+		<div title="dd">dd</div>
+		<!--dom节点-->
+		<!--
+			为什么把js放在body下面
+			防止js方法提前执行
+			防止提前把js释放
+		-->
+		<script type="text/javascript">
+			//js
+//			var oDiv=document.getElementById('div')
+//			var aLi=oDiv.getElementsByTagName('li')
+			//jq
+//			alert($('#div'))
+//			$('.box').css('background','red')
+//			$('div:odd').css('background','#f00')
+			//偶数
+//			$("div:even").css('background','#f00')
+//			奇数
+//			$('div:eq(0)').css('background','yellow')
+//			获取的是索引   aBtn[i].index=i
+//			改变cc的背景颜色 filter 过滤
+			$('div').filter("[title=cc]").css('background','pink')
+			
+		</script>
+	</body>
+</html>
